@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relojoaria Cronos - Contato</title>
+  <meta name="description" content="Fale com a Relojoaria Cronos." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- tema.js e sessao.js carregam primeiro: o tema não pisca e as páginas restritas checam o login antes de aparecer -->
+  <script src="js/tema.js"></script>
+  <script src="js/sessao.js"></script>
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- cabeçalho fixo no topo -->
+  <header class="cabecalho">
+    <button class="botao-hamburguer" id="botao-menu" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="logo" href="index.html" aria-label="Ir para a tela inicial" title="Ir para a tela inicial"><img class="logo-img" src="assets/logo.png" alt="Relojoaria Cronos" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'"><span>Relojoaria Cronos</span></a>
+    <nav class="navegacao" id="navegacao" aria-label="Navegação principal"></nav>
+  </header>
+
+  <div class="overlay-menu" id="overlay-menu"></div>
+  <!-- menu lateral (abre pelo botão de três linhas) -->
+  <aside class="menu-lateral" id="menu-lateral">
+    <button class="fechar-menu" id="botao-fechar-menu" aria-label="Fechar menu">✕</button>
+    <a class="logo" href="index.html" aria-label="Ir para a tela inicial" title="Ir para a tela inicial"><img class="logo-img" src="assets/logo.png" alt="Relojoaria Cronos" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'"><span>Relojoaria Cronos</span></a>
+    <nav id="menu-nav" aria-label="Menu lateral"></nav>
+  </aside>
+
+  <div class="divisor"></div>
+
+  <!-- conteúdo da página -->
+  <div class="fundo-pagina fundo-contato" aria-hidden="true"><div class="fundo-pagina-pelicula"></div></div>
+
+  <main id="conteudo" class="pagina-produto pagina-estreita pagina-com-fundo">
+    <h1 class="titulo-pagina">Contato</h1>
+    <p class="painel-sub">Dúvidas, sugestões ou pedidos especiais? Escreva para a Cronos.</p>
+
+    <section class="cartao sobre-bloco">
+      <h2>Atendimento</h2>
+      <ul class="sobre-valores">
+        <li><strong>E-mail</strong><span>contato@relojoariacronos.com.br</span></li>
+        <li><strong>Telefone</strong><span>(21) 3000-0000 · seg. a sex., 9h às 18h</span></li>
+        <li><strong>Endereço</strong><span>Rua do Relógio, 100 - Centro, Rio de Janeiro / RJ</span></li>
+      </ul>
+    </section>
+
+    <div id="aviso-contato" class="alerta escondido" role="alert"></div>
+
+    <form id="form-contato" class="cartao form-feedback" novalidate>
+      <div class="campo">
+        <label for="ct-nome">Nome</label>
+        <input type="text" id="ct-nome" maxlength="50" autocomplete="name" />
+        <p class="erro-campo" id="ct-nome-erro"></p>
+      </div>
+      <div class="campo">
+        <label for="ct-email">E-mail</label>
+        <input type="email" id="ct-email" maxlength="80" placeholder="nome@exemplo.com" autocomplete="email" />
+        <p class="erro-campo" id="ct-email-erro"></p>
+      </div>
+      <div class="campo">
+        <label for="ct-assunto">Assunto</label>
+        <select id="ct-assunto">
+          <option value="Dúvida sobre produto">Dúvida sobre produto</option>
+          <option value="Pedido">Pedido</option>
+          <option value="Sugestão">Sugestão</option>
+          <option value="Outro">Outro</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="ct-mensagem">Mensagem</label>
+        <textarea id="ct-mensagem" rows="5" maxlength="500" placeholder="Escreva sua mensagem (mínimo 10 caracteres)"></textarea>
+        <p class="erro-campo" id="ct-mensagem-erro"></p>
+      </div>
+      <button type="submit" class="botao">Enviar mensagem</button>
+    </form>
+  </main>
+
+
+
+  <div class="divisor"></div>
+  <!-- rodapé -->
+  <footer class="rodape">
+    <div class="rodape-colunas">
+      <div>
+        <h2>Relojoaria Cronos</h2>
+        <p>Uma seleção de relógios escolhidos pela precisão, pelo acabamento e pela história que carregam.</p>
+      </div>
+      <nav aria-label="Navegação do rodapé">
+        <h2>Navegar</h2>
+        <a href="index.html">Catálogo</a>
+        <a href="index.html?favoritos=1">Favoritos</a>
+        <a href="pedidos.html">Meus pedidos</a>
+        <a href="checkout.html">Carrinho</a>
+        <a href="sobre.html">Sobre nós</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <div>
+        <h2>Compra segura</h2>
+        <p>Garantia de 2 anos<br>Troca em até 30 dias<br>Até 10x sem juros</p>
+      </div>
+    </div>
+    <div class="rodape-selos">
+      <div class="pagamentos" aria-label="Formas de pagamento">
+        <span class="selos-titulo">Formas de pagamento</span>
+        <ul>
+          <li class="pg pg-visa"><img src="assets/pagamentos/visa.png" alt="Visa" onload="this.nextElementSibling.style.display='none'; this.parentNode.classList.add('com-imagem')" onerror="this.style.display='none'"><span>VISA</span></li>
+          <li class="pg pg-master"><img src="assets/pagamentos/mastercard.png" alt="Mastercard" onload="this.nextElementSibling.style.display='none'; this.parentNode.classList.add('com-imagem')" onerror="this.style.display='none'"><span><i></i><i></i>Mastercard</span></li>
+          <li class="pg pg-elo"><img src="assets/pagamentos/elo.png" alt="Elo" onload="this.nextElementSibling.style.display='none'; this.parentNode.classList.add('com-imagem')" onerror="this.style.display='none'"><span>elo</span></li>
+          <li class="pg pg-amex"><img src="assets/pagamentos/amex.png" alt="American Express" onload="this.nextElementSibling.style.display='none'; this.parentNode.classList.add('com-imagem')" onerror="this.style.display='none'"><span>AMEX</span></li>
+          <li class="pg pg-pix"><img src="assets/pagamentos/pix.png" alt="Pix" onload="this.nextElementSibling.style.display='none'; this.parentNode.classList.add('com-imagem')" onerror="this.style.display='none'"><span>PIX</span></li>
+          <li class="pg pg-boleto"><img src="assets/pagamentos/boleto.png" alt="Boleto" onload="this.nextElementSibling.style.display='none'; this.parentNode.classList.add('com-imagem')" onerror="this.style.display='none'"><span>Boleto</span></li>
+        </ul>
+      </div>
+      <div class="seguranca" aria-label="Segurança">
+        <span class="selos-titulo">Segurança</span>
+        <ul>
+          <li class="selo-seg">
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5l-8-3z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m8.5 12 2.4 2.4L15.6 9.6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span><strong>Site protegido</strong><small>Seus dados seguros</small></span>
+          </li>
+          <li class="selo-seg">
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="15.5" r="1.3" fill="currentColor"/></svg>
+            <span><strong>Site seguro</strong><small>Conexão criptografada</small></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <p class="rodape-final">Relojoaria Cronos · Projeto acadêmico</p>
+  </footer>
+
+  <script src="js/produtos.js"></script>
+  <script src="js/carrinho.js"></script>
+  <script src="js/validacoes.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/busca.js"></script>
+  <script src="js/acessibilidade.js"></script>
+  <script src="js/cabecalho.js"></script>
+  <script>
+    const aviso = document.getElementById("aviso-contato");
+    const nome = document.getElementById("ct-nome");
+    const email = document.getElementById("ct-email");
+    const mensagem = document.getElementById("ct-mensagem");
+
+    // preenche nome e e-mail se a pessoa estiver logada
+    if (estaLogado()) {
+      const usuario = obterUsuario();
+      if (usuario) {
+        nome.value = usuario.nome || "";
+        email.value = usuario.email || "";
+      }
+    }
+
+    const campos = {
+      "ct-nome": () => validarNome(nome.value),
+      "ct-email": () => validarEmail(email.value),
+      "ct-mensagem": () => (mensagem.value.trim().length >= 10 ? "" : "A mensagem deve ter pelo menos 10 caracteres."),
+    };
+
+    function validarCampo(id) {
+      return mostrarErroCampo(document.getElementById(id), campos[id]());
+    }
+
+    Object.keys(campos).forEach((id) => {
+      document.getElementById(id).addEventListener("blur", () => validarCampo(id));
+    });
+
+    document.getElementById("form-contato").addEventListener("submit", function (evento) {
+      evento.preventDefault();
+      const resultados = Object.keys(campos).map((id) => validarCampo(id));
+      if (resultados.includes(false)) {
+        aviso.textContent = "Corrija os campos destacados para enviar.";
+        aviso.className = "alerta alerta-erro";
+        const primeiro = document.querySelector("#form-contato .invalido");
+        if (primeiro) primeiro.focus();
+        return;
+      }
+
+      const lista = JSON.parse(localStorage.getItem("relojoaria_contatos") || "[]");
+      lista.push({
+        nome: nome.value.trim(),
+        email: email.value.trim(),
+        assunto: document.getElementById("ct-assunto").value,
+        mensagem: mensagem.value.trim(),
+        data: new Date().toLocaleString("pt-BR"),
+      });
+      localStorage.setItem("relojoaria_contatos", JSON.stringify(lista));
+
+      aviso.textContent = "Mensagem enviada! Responderemos pelo e-mail informado.";
+      aviso.className = "alerta alerta-sucesso";
+      mensagem.value = "";
+      mostrarToast("Mensagem enviada");
+    });
+  </script>
+</body>
+</html>

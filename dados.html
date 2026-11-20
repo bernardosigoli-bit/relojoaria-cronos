@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relojoaria Cronos - Dados enviados</title>
+  <meta name="description" content="Dados enviados no formulário de feedback." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- tema.js e sessao.js carregam primeiro: o tema não pisca e as páginas restritas checam o login antes de aparecer -->
+  <script src="js/tema.js"></script>
+  <script src="js/sessao.js"></script>
+  <script>exigirLogin();</script>
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- cabeçalho fixo no topo -->
+  <header class="cabecalho">
+    <button class="botao-hamburguer" id="botao-menu" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="logo" href="index.html" aria-label="Ir para a tela inicial" title="Ir para a tela inicial"><img class="logo-img" src="assets/logo.png" alt="Relojoaria Cronos" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'"><span>Relojoaria Cronos</span></a>
+    <nav class="navegacao" id="navegacao" aria-label="Navegação principal"></nav>
+  </header>
+
+  <div class="overlay-menu" id="overlay-menu"></div>
+  <!-- menu lateral (abre pelo botão de três linhas) -->
+  <aside class="menu-lateral" id="menu-lateral">
+    <button class="fechar-menu" id="botao-fechar-menu" aria-label="Fechar menu">✕</button>
+    <a class="logo" href="index.html" aria-label="Ir para a tela inicial" title="Ir para a tela inicial"><img class="logo-img" src="assets/logo.png" alt="Relojoaria Cronos" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'"><span>Relojoaria Cronos</span></a>
+    <nav id="menu-nav" aria-label="Menu lateral"></nav>
+  </aside>
+
+  <div class="divisor"></div>
+
+  <!-- conteúdo da página -->
+  <main id="conteudo" class="pagina-produto pagina-estreita">
+    <h1 class="titulo-pagina">Meus dados enviados</h1>
+
+    <div id="aviso-dados" class="alerta alerta-sucesso escondido" role="status">
+      Feedback enviado com sucesso! Confira abaixo os dados registrados.
+    </div>
+
+    <section id="ultimo-feedback" class="cartao"></section>
+
+    <section id="historico" hidden>
+      <h2 class="painel-titulo">Envios anteriores</h2>
+      <div id="lista-historico"></div>
+    </section>
+
+    <div class="acoes-confirmacao">
+      <a href="feedback.html" class="botao">Enviar novo feedback</a>
+      <a href="perfil.html" class="botao botao-secundario">Voltar ao perfil</a>
+    </div>
+  </main>
+
+
+  <div class="divisor"></div>
+  <!-- rodapé -->
+  <footer class="rodape">
+    <div class="rodape-colunas">
+      <div>
+        <h2>Relojoaria Cronos</h2>
+        <p>Uma seleção de relógios escolhidos pela precisão, pelo acabamento e pela história que carregam.</p>
+      </div>
+      <nav aria-label="Navegação do rodapé">
+        <h2>Navegar</h2>
+        <a href="index.html">Catálogo</a>
+        <a href="index.html?favoritos=1">Favoritos</a>
+        <a href="pedidos.html">Meus pedidos</a>
+        <a href="checkout.html">Carrinho</a>
+        <a href="sobre.html">Sobre nós</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <div>
+        <h2>Compra segura</h2>
+        <p>Garantia de 2 anos<br>Troca em até 30 dias<br>Até 10x sem juros</p>
+      </div>
+    </div>
+    <div class="rodape-selos">
+      <div class="pagamentos" aria-label="Formas de pagamento">
+        <span class="selos-titulo">Formas de pagamento</span>
+        <ul>
+          <li class="pg pg-visa"><img src="assets/pagamentos/visa.png" alt="Visa" onload="this.nextElementSibling.style.display='none'; this.parentNode.classList.add('com-imagem')" onerror="this.style.display='none'"><span>VISA</span></li>
+          <li class="pg pg-master"><img src="assets/pagamentos/mastercard.png" alt="Mastercard" onload="this.nextElementSibling.style.display='none'; this.parentNode.classList.add('com-imagem')" onerror="this.style.display='none'"><span><i></i><i></i>Mastercard</span></li>
+          <li class="pg pg-elo"><img src="assets/pagamentos/elo.png" alt="Elo" onload="this.nextElementSibling.style.display='none'; this.parentNode.classList.add('com-imagem')" onerror="this.style.display='none'"><span>elo</span></li>
+          <li class="pg pg-amex"><img src="assets/pagamentos/amex.png" alt="American Express" onload="this.nextElementSibling.style.display='none'; this.parentNode.classList.add('com-imagem')" onerror="this.style.display='none'"><span>AMEX</span></li>
+          <li class="pg pg-pix"><img src="assets/pagamentos/pix.png" alt="Pix" onload="this.nextElementSibling.style.display='none'; this.parentNode.classList.add('com-imagem')" onerror="this.style.display='none'"><span>PIX</span></li>
+          <li class="pg pg-boleto"><img src="assets/pagamentos/boleto.png" alt="Boleto" onload="this.nextElementSibling.style.display='none'; this.parentNode.classList.add('com-imagem')" onerror="this.style.display='none'"><span>Boleto</span></li>
+        </ul>
+      </div>
+      <div class="seguranca" aria-label="Segurança">
+        <span class="selos-titulo">Segurança</span>
+        <ul>
+          <li class="selo-seg">
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5l-8-3z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m8.5 12 2.4 2.4L15.6 9.6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span><strong>Site protegido</strong><small>Seus dados seguros</small></span>
+          </li>
+          <li class="selo-seg">
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="15.5" r="1.3" fill="currentColor"/></svg>
+            <span><strong>Site seguro</strong><small>Conexão criptografada</small></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <p class="rodape-final">Relojoaria Cronos · Projeto acadêmico</p>
+  </footer>
+
+  <script src="js/produtos.js"></script>
+  <script src="js/carrinho.js"></script>
+  <script src="js/validacoes.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/busca.js"></script>
+  <script src="js/acessibilidade.js"></script>
+  <script src="js/cabecalho.js"></script>
+  <script>
+    // pega só os feedbacks do usuário logado
+    const usuario = obterUsuario();
+    const todos = JSON.parse(localStorage.getItem("relojoaria_feedbacks") || "[]")
+      .filter((f) => f.login === usuario.login);
+
+    if (new URLSearchParams(window.location.search).get("enviado") === "1") {
+      document.getElementById("aviso-dados").classList.remove("escondido");
+    }
+
+    // cria uma linha <dt>/<dd> com textContent (mais seguro que innerHTML)
+    function linhaDado(rotulo, valor) {
+      const dt = document.createElement("dt");
+      dt.textContent = rotulo;
+      const dd = document.createElement("dd");
+      dd.textContent = valor;
+      return [dt, dd];
+    }
+
+    function montarLista(f) {
+      const lista = document.createElement("dl");
+      lista.className = "lista-dados";
+      const data = new Date(f.data);
+      const itens = [
+        ["Enviado em", data.toLocaleDateString("pt-BR") + " às " + data.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })],
+        ["Cliente", f.nome],
+        ["Nível de interesse", f.interesse + " / 10"],
+        ["Valor pretendido", formatarPreco(f.investimento)],
+        ["Categoria de interesse", f.categoria],
+        ["Como conheceu a Cronos", f.conheceu],
+        ["O que chama atenção", f.atencao.length ? f.atencao.join(", ") : "Nada marcado"],
+        ["Comentário", f.comentario || "Sem comentário"],
+        ["Receber novidades", f.novidades ? "Sim" : "Não"],
+      ];
+      itens.forEach(([r, v]) => lista.append(...linhaDado(r, v)));
+      return lista;
+    }
+
+    const caixa = document.getElementById("ultimo-feedback");
+    if (todos.length === 0) {
+      caixa.innerHTML = '<p class="carrinho-vazio">Você ainda não enviou nenhum feedback.</p>';
+    } else {
+      const titulo = document.createElement("h2");
+      titulo.className = "painel-titulo";
+      titulo.textContent = "Último envio";
+      caixa.append(titulo, montarLista(todos[0]));
+    }
+
+    if (todos.length > 1) {
+      document.getElementById("historico").hidden = false;
+      todos.slice(1).forEach((f) => {
+        const cartao = document.createElement("article");
+        cartao.className = "cartao bloco-pedido";
+        cartao.appendChild(montarLista(f));
+        document.getElementById("lista-historico").appendChild(cartao);
+      });
+    }
+  </script>
+
+  <a href="checkout.html" class="carrinho-flutuante" aria-label="Ver carrinho">
+    <svg class="icone-carrinho" viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2.2l2.1 10.2a1.5 1.5 0 0 0 1.5 1.2h8.1a1.5 1.5 0 0 0 1.5-1.1L20 8H6.2"/><circle cx="9.5" cy="19.5" r="1.2"/><circle cx="17" cy="19.5" r="1.2"/></svg>
+    <span class="carrinho-contador js-contador-carrinho">0</span>
+  </a>
+</body>
+</html>

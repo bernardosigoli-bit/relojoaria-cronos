@@ -1,0 +1,13 @@
+LOGOS DAS FORMAS DE PAGAMENTO
+Salve aqui, com EXATAMENTE estes nomes (cuidado: o Windows esconde a extensão,
+então o arquivo "visa.png" pode virar "visa.png.png" sem você perceber):
+
+visa.png
+mastercard.png
+elo.png
+amex.png
+pix.png
+boleto.png
+
+Altura exibida no site: 34 px. Enquanto o arquivo não existir, aparece uma etiqueta de texto.
+Visa e Amex: os arquivos enviados vieram totalmente pretos (sem desenho); exporte de novo.
