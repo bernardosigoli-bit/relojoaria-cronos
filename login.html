@@ -36,7 +36,6 @@
   <div class="divisor"></div>
 
   <div class="fundo-login" aria-hidden="true">
-    <div class="fundo-relogios" id="fundo-relogios"></div>
     <div class="fundo-pelicula"></div>
   </div>
 
@@ -101,12 +100,12 @@
       <div class="pagamentos" aria-label="Formas de pagamento">
         <span class="selos-titulo">Formas de pagamento</span>
         <ul>
-          <li class="pg pg-visa"><img src="assets/pagamentos/visa.png" alt="Visa" onload="this.nextElementSibling.style.display='none'; this.parentNode.classList.add('com-imagem')" onerror="this.style.display='none'"><span>VISA</span></li>
-          <li class="pg pg-master"><img src="assets/pagamentos/mastercard.png" alt="Mastercard" onload="this.nextElementSibling.style.display='none'; this.parentNode.classList.add('com-imagem')" onerror="this.style.display='none'"><span><i></i><i></i>Mastercard</span></li>
-          <li class="pg pg-elo"><img src="assets/pagamentos/elo.png" alt="Elo" onload="this.nextElementSibling.style.display='none'; this.parentNode.classList.add('com-imagem')" onerror="this.style.display='none'"><span>elo</span></li>
-          <li class="pg pg-amex"><img src="assets/pagamentos/amex.png" alt="American Express" onload="this.nextElementSibling.style.display='none'; this.parentNode.classList.add('com-imagem')" onerror="this.style.display='none'"><span>AMEX</span></li>
-          <li class="pg pg-pix"><img src="assets/pagamentos/pix.png" alt="Pix" onload="this.nextElementSibling.style.display='none'; this.parentNode.classList.add('com-imagem')" onerror="this.style.display='none'"><span>PIX</span></li>
-          <li class="pg pg-boleto"><img src="assets/pagamentos/boleto.png" alt="Boleto" onload="this.nextElementSibling.style.display='none'; this.parentNode.classList.add('com-imagem')" onerror="this.style.display='none'"><span>Boleto</span></li>
+          <li class="pg pg-visa"><img src="assets/pagamentos/visa.png" alt="Visa"></li>
+          <li class="pg pg-master"><img src="assets/pagamentos/mastercard.png" alt="Mastercard"></li>
+          <li class="pg pg-elo"><img src="assets/pagamentos/elo.png" alt="Elo"></li>
+          <li class="pg pg-amex"><img src="assets/pagamentos/amex.png" alt="American Express"></li>
+          <li class="pg pg-pix"><img src="assets/pagamentos/pix.png" alt="Pix"></li>
+          <li class="pg pg-boleto"><img src="assets/pagamentos/boleto.png" alt="Boleto"></li>
         </ul>
       </div>
       <div class="seguranca" aria-label="Segurança">
@@ -155,23 +154,6 @@
     if (estaLogado()) {
       window.location.replace("perfil.html");
     }
-
-    // desenha os relógios animados do fundo da tela
-    (function () {
-      const marcas = Array.from({ length: 12 }, (_, i) =>
-        `<line x1="100" y1="12" x2="100" y2="${i % 3 === 0 ? 26 : 20}" transform="rotate(${i * 30} 100 100)"/>`).join("");
-      const relogio = (classe) => `
-        <svg class="relogio-fundo ${classe}" viewBox="0 0 200 200" fill="none" stroke="currentColor">
-          <circle cx="100" cy="100" r="92" stroke-width="2"/>
-          <circle cx="100" cy="100" r="84" stroke-width="0.6"/>
-          <g stroke-width="2">${marcas}</g>
-          <line class="ponteiro-hora" x1="100" y1="100" x2="100" y2="58" stroke-width="4"/>
-          <line class="ponteiro-min" x1="100" y1="100" x2="100" y2="34" stroke-width="3"/>
-          <line class="ponteiro-seg" x1="100" y1="112" x2="100" y2="28" stroke-width="1.2"/>
-          <circle cx="100" cy="100" r="4" fill="currentColor"/>
-        </svg>`;
-      document.getElementById("fundo-relogios").innerHTML = relogio("rel-1") + relogio("rel-2") + relogio("rel-3");
-    })();
 
     // limita o que pode ser digitado no usuário e na senha
     document.getElementById("login").addEventListener("input", (evento) => {

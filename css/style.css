@@ -97,26 +97,6 @@ img {
   font-size: 1.25rem;
 }
 
-.logo-tagline {
-  display: block;
-  font-family: var(--fonte-texto);
-  font-size: 0.57rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--dourado);
-  margin-top: 0.15rem;
-  max-height: 1rem;
-  opacity: 1;
-  overflow: hidden;
-  transition: max-height 0.3s ease, opacity 0.25s ease, margin-top 0.3s ease;
-}
-
-.cabecalho.rolado .logo-tagline {
-  max-height: 0;
-  opacity: 0;
-  margin-top: 0;
-}
-
 .navegacao {
   display: flex;
   align-items: center;
@@ -230,10 +210,6 @@ img {
   margin-bottom: 1.6rem;
   padding-bottom: 1.2rem;
   border-bottom: 1px solid var(--borda);
-}
-
-.menu-lateral .logo-tagline {
-  color: var(--dourado-claro);
 }
 
 .menu-lateral nav {
@@ -415,12 +391,6 @@ img {
   padding: 2.1rem;
 }
 
-.abas-login {
-  display: flex;
-  border-bottom: 1px solid var(--borda);
-  margin-bottom: 1.6rem;
-}
-
 .aba {
   flex: 1;
   background: none;
@@ -445,19 +415,6 @@ img {
   color: var(--dourado);
   border-bottom-color: var(--dourado);
   font-weight: 600;
-}
-
-.aviso-checkout {
-  background-color: var(--grafite-clara);
-  border: 1px solid var(--borda);
-  color: var(--cinza-prata);
-  font-size: 0.82rem;
-  padding: 0.75rem 0.9rem;
-  border-radius: 0;
-  margin-bottom: 1.4rem;
-  text-align: center;
-  background: rgba(198,161,91,0.07);
-  border-color: rgba(198,161,91,0.2);
 }
 
 .caixa-login h1 {
@@ -1082,10 +1039,6 @@ html {
     margin-left: auto;
   }
 
-  .navegacao #area-conta {
-    display: none;
-  }
-
   .titulo-secao {
     margin-top: 4rem;
     padding: 0 1.25rem;
@@ -1127,10 +1080,6 @@ html {
 
   .logo {
     font-size: 1.35rem;
-  }
-
-  .logo-tagline {
-    font-size: 0.5rem;
   }
 
   .navegacao a {
@@ -1610,73 +1559,14 @@ select:focus-visible {
   background: radial-gradient(circle at 50% 40%, #151515, #050505 75%);
 }
 
-.fundo-midia {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .fundo-pelicula {
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at 50% 45%, rgba(8, 8, 8, 0.35), rgba(5, 5, 5, 0.7) 85%);
 }
 
-.relogio-fundo {
-  position: absolute;
-  color: rgba(198, 161, 91, 0.55);
-}
-
-.rel-1 {
-  width: 560px;
-  top: 80px;
-  left: -120px;
-}
-
-.rel-2 {
-  width: 420px;
-  bottom: -80px;
-  right: -40px;
-  color: rgba(242, 239, 232, 0.32);
-}
-
-.rel-3 {
-  width: 240px;
-  top: 14%;
-  left: 72%;
-  color: rgba(198, 161, 91, 0.42);
-}
-
-.relogio-fundo line {
-  transform-box: view-box;
-  transform-origin: 100px 100px;
-  stroke-linecap: round;
-}
-
-.ponteiro-seg {
-  animation: girar 60s linear -17s infinite;
-}
-
-.ponteiro-min {
-  animation: girar 3600s linear -600s infinite;
-}
-
-.ponteiro-hora {
-  animation: girar 43200s linear -9000s infinite;
-}
-
-@keyframes girar { to { transform: rotate(360deg); } }
-
-@media (prefers-reduced-motion: reduce) {
-  .ponteiro-seg, .ponteiro-min, .ponteiro-hora { animation: none; }
-}
-
 @media (max-width: 600px) {
   .filtros { padding: 0 1.1rem; }
-  .rel-1 { width: 340px; top: -90px; left: -110px; }
-  .rel-3 { display: none; }
   .bloco-pedido { padding: 1.2rem; }
 }
 
@@ -1836,7 +1726,6 @@ select:focus-visible {
   letter-spacing: 0.16em;
   font-size: 0.72rem;
 }
-.logo-tagline { font-size: 0.7rem; }
 
 .titulo-secao {
   justify-content: center;
@@ -2169,20 +2058,6 @@ select:focus-visible {
   height: var(--altura-logo-menu);
 }
 
-.medida-imagem {
-  display: none;
-  position: absolute;
-  left: 1rem;
-  bottom: 2.6rem;
-  z-index: 3;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #6d675c;
-  border: 1px dashed #c6a15b;
-  padding: 0.3rem 0.7rem;
-  font-size: 0.7rem;
-  letter-spacing: 0.03em;
-}
-
 .imagem-placeholder .icone-camera,
 .imagem-placeholder small {
   display: block;
@@ -2402,15 +2277,6 @@ select:focus-visible {
 
 :root[data-tema="claro"] .fundo-pelicula {
   background: radial-gradient(circle at 50% 45%, rgba(247, 244, 238, 0.35), rgba(239, 234, 224, 0.6) 85%);
-}
-
-:root[data-tema="claro"] .rel-1,
-:root[data-tema="claro"] .rel-3 {
-  color: rgba(138, 106, 44, 0.4);
-}
-
-:root[data-tema="claro"] .rel-2 {
-  color: rgba(74, 52, 38, 0.3);
 }
 
 :root[data-tema="claro"] .botao-secundario {
@@ -2803,9 +2669,6 @@ select:focus-visible {
 }
 
 @media (max-width: 700px) {
-  .cabecalho > .navegacao > #area-conta {
-    display: none;
-  }
   .cabecalho > .navegacao {
     padding-right: 0.7rem;
     gap: 0.8rem;
@@ -3614,8 +3477,7 @@ html {
 
 @media (max-width: 860px) {
   .nav-categorias,
-  .nav-sair,
-  .nav-cadastrar {
+.nav-sair {
     display: none;
   }
 
@@ -4115,37 +3977,13 @@ html {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.15rem;
-  min-width: 58px;
   height: 34px;
-  padding: 0 0.7rem;
+  min-width: 58px;
+  overflow: hidden;
   border-radius: 5px;
   background: #fbf7ef;
-  color: #38271b;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
-
-.pg-visa { color: #1a3a8f; font-style: italic; font-size: 0.9rem; letter-spacing: 0.08em; }
-.pg-elo { color: #111; font-size: 0.95rem; text-transform: lowercase; }
-.pg-amex { color: #1d6fb8; }
-.pg-pix { color: #1b8c7a; letter-spacing: 0.14em; }
-.pg-boleto { color: #38271b; font-weight: 600; }
-.pg-master { font-size: 0.66rem; gap: 0.5rem; }
-.pg-master i {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: #e0402f;
-}
-.pg-master i + i {
-  background: #f2a63a;
-  margin-left: -14px;
-  opacity: 0.9;
-}
-.pg-master i + i + * { margin-left: 0; }
 
 .selo-seg {
   display: flex;
@@ -4199,10 +4037,6 @@ html {
   object-fit: contain;
 }
 
-.pg.com-imagem {
-  padding: 3px 8px;
-}
-
 .pagamentos-checkout {
   margin: 1.4rem 0 1.2rem;
   padding: 1.1rem 0 0;
@@ -4218,16 +4052,6 @@ html {
   font-size: 0.74rem;
   letter-spacing: 0.06em;
   color: var(--cinza-prata);
-}
-
-.pg-master span {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.pg-master i {
-  display: inline-block;
 }
 
 a.logo {
@@ -4281,26 +4105,6 @@ a.logo {
 .botao-cheio {
   width: 100%;
   padding: 1rem;
-}
-
-.pg.com-imagem {
-  padding: 3px 8px;
-}
-
-.pg-pix.com-imagem,
-.pg-boleto.com-imagem,
-.pg-elo.com-imagem {
-  padding: 0;
-  overflow: hidden;
-}
-
-.pg-master.com-imagem {
-  padding: 0;
-  overflow: hidden;
-}
-
-.pg-master.com-imagem img {
-  max-width: 80px;
 }
 
 .secao-cadastro .campo {
@@ -4455,10 +4259,6 @@ a.logo {
   background:
     url("../assets/fundo-login.jpg") center / cover no-repeat,
     radial-gradient(circle at 50% 40%, #5a4030, #2a1c12 80%);
-}
-
-.fundo-login .fundo-relogios {
-  display: none;
 }
 
 .fundo-login .fundo-pelicula,
